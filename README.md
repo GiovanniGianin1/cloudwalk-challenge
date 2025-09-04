@@ -35,6 +35,7 @@ cloudwalk-challenge/
 │   │   ├── conclusion.pdf              # Executive summary of findings 
 │   │ 
 │   │── README.md                        # Project documentation 
+│   │── requirements.txt                 # Requirements to run this project 
 │ 
 │ 
 │── 3.2 - Real-Time Monitoring & Alerts/ 
@@ -45,6 +46,8 @@ cloudwalk-challenge/
 │   │   ├── README.md                   # Documentation for Task 3.2 
 │   │ 
 │   │── README.md                       # Project documentation 
+│   │── requirements.txt                 # Requirements to run this project 
+
 ```
 
 ---
@@ -60,15 +63,15 @@ cloudwalk-challenge/
 
 ## Executive Summary (Task 3.1)
 
-📄 Download Full Report (PDF) (3.1%20-%20Anomaly%20Behavior%20Analysis/conclusion/conclusion.pdf)
-
+📄 [Download Full Report (PDF)](https://github.com/GiovanniGianin1/cloudwalk-challenge/blob/main/3.1%20-%20Anomaly%20Behavior%20Analysis/README.md)
 
 ---
 
 ## Executive Summary (Task 3.2)
 
-📄 Download Full Report (PDF)
+📄 [Download Full Report (PDF)](https://github.com/GiovanniGianin1/cloudwalk-challenge/blob/main/3.2%20-%20Real-Time%20Monitoring%20%26%20Alerts/README.md)
 
+---
 
 Prepared by: Giovanni Gianini
 Date: September 3, 2025
