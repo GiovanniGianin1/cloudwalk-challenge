@@ -19,34 +19,41 @@ Build a simple real-time monitoring system that receives transaction data and tr
 ## Project Structure
 
 ```
-cloudwalk-challenge/ 
-│── README.md                        # Project documentation (this file)
-│ 
-│ 
-│── 3.1 - Anomaly Behavior Analysis/ 
-│   ├── data/ 
-│   │   ├── checkout_1.csv              # Raw dataset 1 
-│   │   ├── checkout_2.csv              # Raw dataset 2 
-│   │ 
-│   ├── analysis/ 
-│   │   ├── analysis.ipynb              # Jupyter Notebook with SQL queries & visualizations 
-│   │ 
-│   ├── conclusion/ 
-│   │   ├── conclusion.pdf              # Executive summary of findings 
-│   │ 
-│   │── README.md                        # Project documentation 
-│   │── requirements.txt                 # Requirements to run this project 
-│ 
-│ 
-│── 3.2 - Real-Time Monitoring & Alerts/ 
-│   ├── monitoring/ 
-│   │   ├── app.py                      # Alert system implementation 
-│   │   ├── model.py                    # Anomaly detection logic 
-│   │   ├── dashboard.ipynb             # Real-time visualization 
-│   │   ├── README.md                   # Documentation for Task 3.2 
-│   │ 
-│   │── README.md                       # Project documentation 
-│   │── requirements.txt                 # Requirements to run this project 
+cloudwalk-challenge/
+│
+├── README.md                      # Root documentation for the entire challenge (this file)
+├── .gitignore                     # Git ignore rules for Python, logs, data, etc.
+│
+├── 3.1 - Anomaly Behavior Analysis/
+│   ├── analysis/
+│   │   ├── analysis.ipynb         # Jupyter Notebook with SQL queries and visualizations
+│   │
+│   ├── conclusion/
+│   │   ├── conclusion.pdf         # Executive summary of findings and insights
+│   │
+│   ├── data/
+│   │   ├── checkout_1.csv         # Raw dataset 1 used for SQL analysis
+│   │   ├── checkout_2.csv         # Raw dataset 2 used for SQL analysis
+│   │
+│   ├── README.md                  # Documentation for the anomaly behavior analysis
+│   ├── requirements.txt           # Python dependencies for running the notebook
+│
+├── 3.2 - Real-Time Monitoring & Alerts/
+│   ├── monitoring/
+│   │   ├── data/
+│   │   │   ├── transactions.csv               # Main dataset for training the alert system
+│   │   │   ├── transactions.json              # JSON version of transaction data
+│   │   │   ├── transactions_auth_codes.csv    # Additional transaction metadata
+│   │   │
+│   │   ├── app.py                  # Flask app with real-time alert endpoint
+│   │   ├── convert_to_json.py      # Utility to convert CSV to JSON format
+│   │   ├── deshboard.ipynb         # Dashboard with anomaly visualization
+│   │   ├── model.py                # Isolation Forest model for anomaly detection
+│   │   ├── test_monitor.py         # Script to simulate transactions and test alerts
+│   │   ├── utils.py                # Data loading and aggregation functions
+│   │
+│   ├── README.md                   # Documentation for the monitoring system
+│   ├── requirements.txt            # Python dependencies for running the alert system
 
 ```
 

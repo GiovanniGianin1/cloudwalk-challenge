@@ -7,19 +7,21 @@ The goal of this task is to analyze checkout sales data, detect anomalies, and v
 
 ##  Repository Structure
 ```
-│── 3.1 - Anomaly Behavior Analysis/ 
-│   ├── data/ 
-│   │   ├── checkout_1.csv              # Raw dataset 1 
-│   │   ├── checkout_2.csv              # Raw dataset 2 
-│   │ 
-│   ├── analysis/ 
-│   │   ├── analysis.ipynb              # Jupyter Notebook with SQL queries & visualizations 
-│   │ 
-│   ├── conclusion/ 
-│   │   ├── conclusion.pdf              # Executive summary of findings 
-│   │ 
-│   │── README.md                        # Project documentation 
-│   │── requirements.txt                 # Requirements to run this project 
+cloudwalk-challenge/
+│
+├── 3.1 - Anomaly Behavior Analysis/
+│   ├── analysis/
+│   │   ├── analysis.ipynb         # Jupyter Notebook with SQL queries and visualizations
+│   │
+│   ├── conclusion/
+│   │   ├── conclusion.pdf         # Executive summary of findings and insights
+│   │
+│   ├── data/
+│   │   ├── checkout_1.csv         # Raw dataset 1 used for SQL analysis
+│   │   ├── checkout_2.csv         # Raw dataset 2 used for SQL analysis
+│   │
+│   ├── README.md                  # Documentation for the anomaly behavior analysis
+│   ├── requirements.txt           # Python dependencies for running the notebook
 ```
 
 ---
