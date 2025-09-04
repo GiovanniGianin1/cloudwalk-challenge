@@ -1,34 +1,35 @@
-# Monitoring Analyst Challenge – Data Analysis (Part 3.1)
+#  Data Analysis (Part 3.1)
 
-This repository contains my solution for the **Monitoring Intelligence Analyst Challenge – Task 3.1**.  
+This repository contains my solution for the **Task 3.1**.  
 The goal of this task is to analyze checkout sales data, detect anomalies, and visualize patterns compared to historical behavior.
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 ```
-cloudwalk-challenge/
-│── data/
-│   ├── checkout_1.csv              # Raw dataset 1
-│   ├── checkout_2.csv              # Raw dataset 2
-│
-│── analysis/
-│   ├── analysis.ipynb              # Jupyter Notebook with SQL queries & visualizations
-
-│── conclusion/
-│   ├── c              # Conclusion
-│
-│── README.md                       # Project documentation
+│── 3.1 - Anomaly Behavior Analysis/ 
+│   ├── data/ 
+│   │   ├── checkout_1.csv              # Raw dataset 1 
+│   │   ├── checkout_2.csv              # Raw dataset 2 
+│   │ 
+│   ├── analysis/ 
+│   │   ├── analysis.ipynb              # Jupyter Notebook with SQL queries & visualizations 
+│   │ 
+│   ├── conclusion/ 
+│   │   ├── conclusion.pdf              # Executive summary of findings 
+│   │ 
+│   │── README.md                        # Project documentation 
+│   │── requirements.txt                 # Requirements to run this project 
 ```
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/cloudwalk-challenge.git
-cd cloudwalk-challenge
+git clone https://github.com/GiovanniGianin1/cloudwalk-challenge.git
+cd "cloudwalk-challenge\3.1 - Anomaly Behavior Analysis"
 ```
 
 ### 2. Install dependencies
@@ -48,40 +49,14 @@ jupyter notebook analysis.ipynb
 
 ---
 
-## 📊 Analysis Overview
-- The provided datasets (`checkout_1.csv` and `checkout_2.csv`) contain **sales per hour** with the following fields:
-  - `today` – sales for today  
-  - `yesterday` – sales for yesterday  
-  - `same_day_last_week` – same weekday last week  
-  - `avg_last_week` – average from last week  
-  - `avg_last_month` – average from last month  
+## Executive Summary (Task 3.1)
 
-- A SQL-based rule engine was applied to detect anomalies:
-  - **Spike Anomaly** → when `today > 2 * avg_last_week`  
-  - **Drop Anomaly** → when `today < 0.3 * avg_last_week`  
-  - Otherwise → **Normal**  
-
-- Results are stored in:
-  - `checkout1_anomalias.csv`  
-  - `checkout2_anomalias.csv`  
-
-- Visualization: line charts were generated to compare `today` against historical data.
+📄 [Download Full Report (PDF)](https://github.com/GiovanniGianin1/cloudwalk-challenge/blob/main/3.1%20-%20Anomaly%20Behavior%20Analysis/README.md)
 
 ---
 
-## 📈 Example Results
 
-### Checkout 1
-- Spike anomalies detected between **10h–12h** and **15h**.  
-- Drop anomaly at **08h**, where sales dropped compared to historical data.  
-
-### Checkout 2
-- Strong spikes at **08h–09h**.  
-- Severe drops at **15h–17h** (sales dropped to zero, while historical data shows high activity).  
-
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 - **Python 3**  
 - **Pandas** for data manipulation  
 - **SQLite (in-memory)** for SQL queries  
@@ -90,16 +65,9 @@ jupyter notebook analysis.ipynb
 
 ---
 
-## ✅ Deliverables
+## Deliverables
 - SQL query for anomaly detection.  
-- CSV outputs with anomaly flags.  
 - Graphical visualization of patterns.  
 - Structured explanation of findings.  
 
 ---
-
-👉 Next step (Task 3.2) will involve implementing a **real-time monitoring API with alerting system**.  
-
----
-
-⚡ Author: *Your Name*  
