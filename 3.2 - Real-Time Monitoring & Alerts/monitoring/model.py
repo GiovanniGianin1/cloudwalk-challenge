@@ -1,22 +1,31 @@
+from sklearn.ensemble import IsolationForest
 import pandas as pd
 
-def detect_anomaly(df_minute, thresholds=None):
-    """
-    Receives a DataFrame with transaction counts per status per minute.
-    Returns a dictionary with alert flags.
-    """
-    if thresholds is None:
-        thresholds = {
-            'failed': 5,
-            'denied': 3,
-            'reversed': 4
-        }
+class AnomalyDetector:
+    def __init__(self):
+        self.model = IsolationForest(contamination=0.05, random_state=42)
+        self.fitted = False
 
-    alerts = {}
-    for status in ['failed', 'denied', 'reversed']:
-        count = df_minute.get(status, 0)
-        if count > thresholds[status]:
-            alerts[status] = 'alert'
-        else:
-            alerts[status] = 'ok'
-    return alerts
+    def fit(self, df):
+        # Garante que todas as colunas estejam presentes
+        for col in ['failed', 'denied', 'reversed']:
+            if col not in df.columns:
+                df[col] = 0
+
+        df_filtered = df[['failed', 'denied', 'reversed']].fillna(0)
+        self.model.fit(df_filtered)
+        self.fitted = True
+
+    def predict(self, df_minute):
+        if not self.fitted:
+            raise ValueError("Model not trained. Call fit() first.")
+
+        # Garante que todas as colunas estejam presentes
+        for col in ['failed', 'denied', 'reversed']:
+            if col not in df_minute.columns:
+                df_minute[col] = 0
+
+        df_filtered = df_minute[['failed', 'denied', 'reversed']].fillna(0)
+        scores = self.model.predict(df_filtered)
+        df_minute['anomaly'] = scores
+        return df_minute[df_minute['anomaly'] == -1]  # -1 indica anomalia

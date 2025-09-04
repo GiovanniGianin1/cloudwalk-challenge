@@ -5,4 +5,5 @@ def load_transactions(path='data/transactions.csv'):
     return df
 
 def aggregate_by_minute(df):
-    return df.groupby(['timestamp', 'status'])['count'].sum().unstack(fill_value=0)
+    grouped = df.groupby(['timestamp', 'status'])['count'].sum().unstack(fill_value=0)
+    return grouped.reset_index()
