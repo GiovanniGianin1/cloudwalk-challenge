@@ -76,9 +76,9 @@ cloudwalk-challenge/
 
 ## Executive Summary (Task 3.2)
 
-📄 [Download Full Report (PDF)](https://github.com/GiovanniGianin1/cloudwalk-challenge/blob/main/3.2%20-%20Real-Time%20Monitoring%20%26%20Alerts/README.md)
+📄 [View Full Technical Documentation](https://github.com/GiovanniGianin1/cloudwalk-challenge/blob/main/3.2%20-%20Real-Time%20Monitoring%20%26%20Alerts/README.md)
 
----
+--- 
 
 Prepared by: Giovanni Gianini
 Date: September 3, 2025
