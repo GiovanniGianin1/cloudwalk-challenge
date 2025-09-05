@@ -85,9 +85,7 @@ You can test the system using `curl`, Postman, or the simulation script.
 #### Example using `curl`:
 
 ```bash
-curl -X POST http://127.0.0.1:5000/monitor \
-  -H "Content-Type: application/json" \
-  -d '[{"timestamp": "2025-07-15 12:00:00", "status": "approved", "count": 120}]'
+curl -X POST http://127.0.0.1:5000/monitor -H "Content-Type: application/json" -d "[{\"timestamp\": \"2025-07-15 12:00:00\", \"status\": \"approved\", \"count\": 120}]"
 ```
 
 #### Example using PowerShell:
